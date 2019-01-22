@@ -123,7 +123,7 @@ SENSOR_TYPE_CHOICES = (
 class SensorDataValue(TimeStampedModel):
 
     sensordata = models.ForeignKey(SensorData, related_name='sensordatavalues')
-    value = models.TextField(db_index=True)
+    value = models.DecimalField(max_digits=14, decimal_places=11, null=True, blank=True)
     value_type = models.CharField(max_length=100, choices=SENSOR_TYPE_CHOICES,
                                   db_index=True)
 
