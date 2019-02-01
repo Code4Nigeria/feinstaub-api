@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
 	libmemcached-dev \
 	locales \
 	postgresql-client-9.5 \
-	postgresql-server-dev-all \
 	sudo \
 	ttf-dejavu-core \
 	&& rm -rf /var/lib/apt/lists/*
